@@ -266,7 +266,23 @@
             border-top: 1px solid var(--border);
             background: var(--bg-deep);
         }
+        /* Two column layout */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .col-image img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
         /* Responsive */
+        @media (max-width: 768px) {
+            .two-col { grid-template-columns: 1fr; }
+            .col-image { order: -1; }
+        }
         @media (max-width: 600px) {
             .hero { padding: 60px 0 40px; }
             section { padding: 40px 0; }
@@ -311,10 +327,17 @@
 
     <section>
         <div class="container">
-            <h2>YOU'RE GETTING MORE THAN A DOMAIN NAME</h2>
-            <p>This is designed as a <strong>turnkey business website package</strong> — giving you a starting point for building your own online business-promotion service.</p>
-            <p>Instead of beginning with an empty domain and trying to determine what to sell, how to position it and how to present your services, you start with a website already built around helping businesses improve their internet presence.</p>
-            <p><strong>Brand it. Promote it. Find businesses that need help. Offer the services that fit their needs.</strong></p>
+            <div class="two-col">
+                <div class="col-text">
+                    <h2>YOU'RE GETTING MORE THAN A DOMAIN NAME</h2>
+                    <p>This is designed as a <strong>turnkey business website package</strong> — giving you a starting point for building your own online business-promotion service.</p>
+                    <p>Instead of beginning with an empty domain and trying to determine what to sell, how to position it and how to present your services, you start with a website already built around helping businesses improve their internet presence.</p>
+                    <p><strong>Brand it. Promote it. Find businesses that need help. Offer the services that fit their needs.</strong></p>
+                </div>
+                <div class="col-image">
+                    <img src="more-than-domain.png" alt="Business promotion website package">
+                </div>
+            </div>
         </div>
     </section>
 
