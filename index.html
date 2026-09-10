@@ -67,14 +67,17 @@
             transform: translateX(-50%);
             width: 200px;
             height: 2px;
-            background: linear-gradient(90deg, transparent, var(--accent-cyan), var(--accent-purple), transparent);
+            background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent);
         }
         .hero h1 {
             font-family: 'Plus Jakarta Sans', sans-serif;
             font-size: clamp(2rem, 5vw, 3.5rem);
             font-weight: 800;
             line-height: 1.1;
-            color: var(--headings);
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             margin-bottom: 20px;
             text-transform: uppercase;
             letter-spacing: -1px;
@@ -82,7 +85,7 @@
         .hero-sub {
             font-family: 'Plus Jakarta Sans', sans-serif;
             font-size: 1.3rem;
-            color: var(--primary);
+            color: var(--accent-cyan);
             font-weight: 600;
         }
         /* Sections */
@@ -94,26 +97,26 @@
             font-family: 'Plus Jakarta Sans', sans-serif;
             font-size: 1.8rem;
             margin-bottom: 24px;
-            color: var(--headings);
+            color: var(--accent-cyan);
         }
         h3 {
             font-family: 'Plus Jakarta Sans', sans-serif;
             font-size: 1.3rem;
             margin: 30px 0 15px;
-            color: var(--primary);
+            color: var(--accent-purple);
         }
         h4 {
             font-family: 'Plus Jakarta Sans', sans-serif;
             font-size: 1.1rem;
             margin: 20px 0 10px;
-            color: var(--secondary);
+            color: var(--accent-cyan);
         }
         p {
             margin-bottom: 16px;
             color: var(--text-dim);
         }
         strong {
-            color: var(--headings);
+            color: var(--text);
             font-weight: 700;
         }
         /* Domain cards */
@@ -124,7 +127,7 @@
             margin: 30px 0;
         }
         .domain-card {
-            background: var(--surface);
+            background: var(--bg-midnight);
             border: 1px solid var(--border);
             border-radius: 16px;
             padding: 28px;
@@ -132,25 +135,25 @@
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 2px 8px rgba(20,53,112,0.08);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
         }
         .domain-card::before {
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0;
             height: 3px;
-            background: linear-gradient(90deg, var(--primary), var(--highlight));
+            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
         }
         .domain-card:hover {
-            border-color: var(--primary);
-            box-shadow: 0 8px 24px rgba(20,53,112,0.15);
+            border-color: var(--accent-cyan);
+            box-shadow: 0 8px 24px rgba(0,200,255,0.15);
             transform: translateY(-4px);
         }
         .domain-card h4 {
             font-family: 'Plus Jakarta Sans', sans-serif;
             font-size: 1.2rem;
             margin-bottom: 10px;
-            color: var(--primary);
+            color: var(--accent-cyan);
         }
         .domain-card p {
             font-size: 0.95rem;
@@ -171,11 +174,12 @@
             content: '◆';
             position: absolute;
             left: 0;
-            color: var(--primary);
+            color: var(--accent-cyan);
+            text-shadow: 0 0 10px rgba(0,200,255,0.4);
         }
         /* Highlight box */
         .highlight-box {
-            background: var(--surface-alt);
+            background: var(--bg-midnight);
             border: 1px solid var(--border);
             border-radius: 16px;
             padding: 32px;
@@ -187,30 +191,30 @@
             position: absolute;
             top: -1px; left: 20%; right: 20%;
             height: 3px;
-            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+            background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent);
         }
         /* CTA Button */
         .cta-button {
             font-family: 'Plus Jakarta Sans', sans-serif;
             display: inline-block;
             padding: 18px 48px;
-            background: var(--button);
-            color: #fff;
-            font-weight: 700;
+            background: var(--accent-orange);
+            color: #071426;
+            font-weight: 800;
             font-size: 1.1rem;
             text-decoration: none;
             border-radius: 50px;
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 16px rgba(54,0,250,0.3);
+            box-shadow: 0 4px 16px rgba(255,138,0,0.3);
             border: none;
             cursor: pointer;
         }
         .cta-button:hover {
             transform: scale(1.05);
-            box-shadow: 0 8px 32px rgba(54,0,250,0.4);
-            background: var(--primary);
+            box-shadow: 0 8px 32px rgba(255,138,0,0.5);
+            background: #ff9d2e;
         }
         .cta-wrap {
             text-align: center;
@@ -221,13 +225,16 @@
             font-family: 'Plus Jakarta Sans', sans-serif;
             font-size: 3rem;
             font-weight: 800;
-            color: var(--primary);
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             text-align: center;
             margin: 20px 0;
         }
         /* Scarcity banner */
         .scarcity {
-            background: var(--surface-alt);
+            background: var(--bg-midnight);
             border: 1px solid var(--border);
             border-radius: 12px;
             padding: 20px;
@@ -235,7 +242,7 @@
             margin: 30px 0;
         }
         .scarcity strong {
-            color: var(--primary);
+            color: var(--accent-orange);
         }
         /* Footer */
         footer {
@@ -243,7 +250,8 @@
             padding: 40px 0;
             color: var(--text-dim);
             font-size: 0.9rem;
-            border-top: 1px solid rgba(255,255,255,0.05);
+            border-top: 1px solid var(--border);
+            background: var(--bg-deep);
         }
         /* Responsive */
         @media (max-width: 600px) {
@@ -534,14 +542,14 @@
             <p>Use the website to introduce your services. Use the Free Business Report to start conversations. Turn the opportunities you discover into services you can offer.</p>
             
             <div class="price-tag">$1,199</div>
-            <p style="color: var(--primary); font-weight: 600;">Turnkey AI Business Promotion Website</p>
+            <p style="color: var(--accent-cyan); font-weight: 600;">Turnkey AI Business Promotion Website</p>
         </div>
     </section>
 
     <div class="cta-wrap">
         <div class="container">
             <h2 style="margin-bottom: 10px;">DON'T WAIT UNTIL YOUR FAVORITE DOMAIN IS THE ONE THAT'S GONE.</h2>
-            <p style="margin-bottom: 30px;"><strong>3 AVAILABLE. BONUS PACKAGE FOR THE FIRST 2 BUYERS. FIRST COME. FIRST CHOICE.</strong></p>
+            <p style="margin-bottom: 30px; color: var(--accent-orange);"><strong>3 AVAILABLE. BONUS PACKAGE FOR THE FIRST 2 BUYERS. FIRST COME. FIRST CHOICE.</strong></p>
             <a href="#" class="cta-button">Choose Your AI Business Promotion Website</a>
         </div>
     </div>
