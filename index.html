@@ -282,6 +282,19 @@
             border-radius: 16px;
             box-shadow: 0 8px 32px rgba(0,0,0,0.3);
         }
+        /* Background image section */
+        .bg-section {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .bg-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(7, 20, 38, 0.8);
+            z-index: 0;
+        }
         /* Responsive */
         @media (max-width: 768px) {
             .two-col { grid-template-columns: 1fr; }
@@ -390,8 +403,9 @@
         </div>
     </section>
 
-    <section>
-        <div class="container">
+    <section class="bg-section" style="background-image: url('problem-solution-bg.png');">
+        <div class="bg-overlay"></div>
+        <div class="container" style="position: relative; z-index: 1;">
             <h2>FIND A PROBLEM. OFFER A SOLUTION.</h2>
             <p>Many small-business owners don't have time to constantly evaluate their:</p>
             <ul class="feature-list compact">
