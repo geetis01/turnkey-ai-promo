@@ -9,39 +9,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #4A05EB;
-            --secondary: #001BA3;
-            --text: #101A35;
-            --text-dim: #5F6F91;
-            --headings: #061A49;
-            --deep-overlay: #021036;
-            --surface: #FFFFFF;
-            --surface-alt: #F4F8FF;
-            --border: #D9E4F6;
-            --highlight: #6C76F9;
-            --success: #0C8A50;
-            --teal: #078A9A;
-            --warning: #FFB018;
-            --error: #B42318;
-            --shadow: #143570;
-            --button: #3600FA;
+            --bg-deep: #071426;
+            --bg-midnight: #0D2038;
+            --accent-cyan: #00C8FF;
+            --accent-purple: #7657FF;
+            --accent-orange: #FF8A00;
+            --accent-green: #35E68A;
+            --text: #F5F8FC;
+            --text-dim: #AAB8C8;
+            --headings: #F5F8FC;
+            --surface: #071426;
+            --surface-alt: #0D2038;
+            --border: rgba(0,200,255,0.15);
+            --button: #FF8A00;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Manrope', 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background: var(--surface);
+            background: var(--bg-deep);
             color: var(--text);
             line-height: 1.7;
             overflow-x: hidden;
         }
-        /* Subtle background pattern */
+        /* Subtle grid pattern */
         body::before {
             content: '';
             position: fixed;
             top: 0; left: 0; right: 0; bottom: 0;
             background-image:
-                linear-gradient(rgba(74,5,235,0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(74,5,235,0.03) 1px, transparent 1px);
+                linear-gradient(rgba(0,200,255,0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,200,255,0.04) 1px, transparent 1px);
             background-size: 50px 50px;
             pointer-events: none;
             z-index: 0;
@@ -91,7 +88,10 @@
         /* Sections */
         section {
             padding: 60px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid var(--border);
+        }
+        section:nth-child(even) {
+            background: var(--bg-midnight);
         }
         h2 {
             font-family: 'Plus Jakarta Sans', sans-serif;
@@ -449,7 +449,7 @@
                 <h4>INCLUDING THE SPECIAL 12TH BONUS:</h4>
                 <p><strong>HOW TO USE THE WEBSITE YOU JUST PURCHASED TO HELP PROMOTE ITSELF</strong></p>
                 <p>Don't just own the website. <strong>Put it to work.</strong> Use its free offers, content, reports and services as reasons to reach out to businesses and bring prospects back to your site.</p>
-                <p style="color: var(--accent-pink); margin-top: 15px;"><strong>Only the first 2 buyers receive the complete 12-guide bonus package.</strong></p>
+                <p style="color: var(--accent-orange); margin-top: 15px;"><strong>Only the first 2 buyers receive the complete 12-guide bonus package.</strong></p>
             </div>
         </div>
     </section>
@@ -490,8 +490,8 @@
                 Once your preferred domain has been purchased, it is no longer available.
             </div>
             
-            <div class="scarcity" style="border-color: var(--accent-pink); background: linear-gradient(90deg, rgba(236,72,153,0.1), rgba(168,85,247,0.1));">
-                <strong style="color: var(--accent-pink);">ONLY THE FIRST 2 BUYERS RECEIVE THE 12-PDF BONUS PACKAGE.</strong>
+            <div class="scarcity" style="border-color: var(--accent-orange);">
+                <strong style="color: var(--accent-orange);">ONLY THE FIRST 2 BUYERS RECEIVE THE 12-PDF BONUS PACKAGE.</strong>
             </div>
         </div>
     </section>
