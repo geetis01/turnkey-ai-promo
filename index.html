@@ -295,6 +295,13 @@
             background: rgba(7, 20, 38, 0.85);
             z-index: 0;
         }
+        /* White border box */
+        .white-border-box {
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 16px;
+            padding: 32px;
+            background: rgba(13, 32, 56, 0.5);
+        }
         /* Responsive */
         @media (max-width: 768px) {
             .two-col { grid-template-columns: 1fr; }
@@ -585,10 +592,12 @@
 
     <section>
         <div class="container">
-            <h2>IMPORTANT: THIS IS A BUSINESS OPPORTUNITY — NOT AN INCOME PROMISE</h2>
-            <p>No sales, revenue, search rankings, customer acquisition or profit are guaranteed.</p>
-            <p>Like any business, results depend on factors including your skills, effort, pricing, market, competition, service quality and ability to find and serve customers.</p>
-            <p>What you're purchasing is the <strong>website/domain package and the included materials described in this listing</strong> — not guaranteed customers or guaranteed earnings.</p>
+            <div class="white-border-box">
+                <h2>IMPORTANT: THIS IS A BUSINESS OPPORTUNITY — NOT AN INCOME PROMISE</h2>
+                <p>No sales, revenue, search rankings, customer acquisition or profit are guaranteed.</p>
+                <p>Like any business, results depend on factors including your skills, effort, pricing, market, competition, service quality and ability to find and serve customers.</p>
+                <p>What you're purchasing is the <strong>website/domain package and the included materials described in this listing</strong> — not guaranteed customers or guaranteed earnings.</p>
+            </div>
         </div>
     </section>
 
